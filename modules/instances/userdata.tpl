@@ -3,7 +3,16 @@ repo_update: true
 repo_upgrade: all
 
 write_files:
-- path: /home/centos/ssh_keys.sh
+- path: /etc/csp/boot_config/metadata.json
+  permissions: '0777'
+  content: |
+     {
+     "meta": {
+      "vm_role" : "${vm_role}"
+     }
+             }
+
+- path: /etc/csp/boot_scripts/ssh_keys.sh
   permissions: '0755'
   content: |
      #!/bin/bash
@@ -13,7 +22,7 @@ write_files:
 
      ssh -o StrictHostKeyChecking=no centos@localhost
      
-- path: /home/centos/play-books.sh
+- path: /etc/csp/boot_scripts/play-books.sh
   permissions: '0755'
   content: |
      #!/bin/bash
