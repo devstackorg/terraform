@@ -26,7 +26,7 @@ write_files:
   permissions: '0755'
   content: |
      #!/bin/bash
-     https://github.com/devstackorg/ansible.git
+     git clone https://github.com/devstackorg/ansible.git
 
      cd ansible/plays
 
