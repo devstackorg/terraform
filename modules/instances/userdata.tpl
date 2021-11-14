@@ -34,6 +34,6 @@ write_files:
 
 
 runcmd:
-# - [ sh, /home/centos/ssh_keys.sh ]
-# - [ sh, /home/centos/play_books.sh ]
+# - [ sh, /etc/csp/boot_scripts/ssh_keys.sh ]
+  - [ sh, /etc/csp/boot_scripts/play-books.sh ]
 
