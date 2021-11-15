@@ -30,7 +30,7 @@ write_files:
 
      cd ansible/plays
 
-     ansible-playbook -i hosts devstack.yml
+     ansible-playbook devstack.yml
 
 
 runcmd:
