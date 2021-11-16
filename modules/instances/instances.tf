@@ -1,7 +1,7 @@
 ################################################  Jenkins server ####
 resource "aws_instance" "jenkins" {
 ami = "${var.myamiid}"
-instance_type = "t2.medium"
+instance_type = "t2.2xlarge"
 subnet_id = "${aws_subnet.publicsubnet.id}"
 private_ip = "172.31.1.5"
 vpc_security_group_ids = ["${aws_security_group.websg.id}"]
@@ -15,7 +15,7 @@ Name = "jenkins"
 ################################################  Artifactory server ################
 resource "aws_instance" "artifactory" {
 ami = "${var.myamiid}"
-instance_type = "t2.medium"
+instance_type = "t2.2xlarge"
 subnet_id = "${aws_subnet.publicsubnet.id}"
 private_ip = "172.31.1.6"
 vpc_security_group_ids = ["${aws_security_group.websg.id}"]
